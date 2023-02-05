@@ -1,0 +1,89 @@
+---
+import { Icon } from "astro-icon";
+---
+<section id="contact" class="bg-cyan-500 py-24 grid place-items-center">
+    
+    <div class="grid lg:max-w-2xl">
+        <h2 class="text-center text-white mb-6">Get in Touch</h2>
+        <p class="place-self-center text-center w-2/3 mb-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat eius dolores, at quasi unde optio facilis neque blanditiis harum.</p>
+        <div class="flex  md:flex-row flex-wrap gap-4 mb-4">
+            <div class="flex p-3 grow bg-white rounded">
+                <Icon class="bg-gray-200 w-8 mr-4 rounded-full" name="ic:outline-phone-in-talk"/>
+                <div class="">
+                    <p class="text-sm">Give Me a Call</p>
+                    <p class="">1.800.123.4567</p>
+                </div>     
+            </div>
+            <div class="flex p-3 grow bg-white rounded">
+                <Icon class="bg-gray-200 w-8 mr-4 rounded-full" name="ic:outline-email"/>
+                <div class="">
+                    <p class="text-sm">Email</p>
+                    <p class="">myemail@email.com</p>
+                </div>     
+            </div>
+            <div class="flex p-3 grow bg-white rounded">
+                <Icon class="bg-gray-200 w-8 mr-4 rounded-full" name="ph:map-pin-bold"/>
+                <div class="">
+                    <p class="text-sm">Located At</p>
+                    <p class="">Dallas, TX USA</p>
+                </div>     
+            </div>
+        </div>
+        <form action="" class="grid grid-cols-2 gap-4">
+            <input type="text" id="name" name="name" placeholder="Your Name" class="p-2 rounded">
+            <input type="email" id="email" name="email" placeholder="Email" class="p-2 rounded">
+            <input id="subject" name="subject" placeholder="Subject" class="col-span-2 p-2 rounded">
+            <textarea id="message" name="message" placeholder="Message" class="col-span-2 h-32 p-2 rounded"></textarea>
+            <button type="submit" class="bg-cyan-500  text-md font-semibold text-white uppercase px-8 py-2 border-2 rounded-lg col-span-2">Submit</button>
+        </form>
+    </div>
+    
+
+
+    <!-- <div class="flex flex-col md:flex-row flex-wrap gap-x-32 justify-center text-center px-10 md:px-40">
+        <div class="flex-1">
+            <h2 class="text-white mb-6">Get in Touch</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat eius dolores, at quasi unde optio facilis neque blanditiis harum.</p>
+            <div class="flexgap-3">
+                <div class="flex items-center">
+                    <Icon class="w-8 mr-4" name="ic:outline-phone-in-talk"/>
+                    <p class="text-lg">1.800.123.4567</p>
+                </div>
+                <div class="flex items-center">
+                    <Icon class="w-8 mr-4" name="ic:outline-email"/>
+                    <p class="text-lg">hello@arismercedes.com</p>
+                </div>
+                <div class="flex items-center">
+                    <Icon class="w-8 mr-4" name="ph:map-pin-bold"/>
+                    <p class="text-lg">Located at Dallas, TX</p>
+                </div>
+            <div class="flex-justify-center">
+                <form class="flex flex-wrap min-w-[450px] gap-4" action="action_page.php">
+                        <input type="text" id="name" name="name" placeholder="Your Name" class="flex-1">
+                        <input type="email" id="email" name="email" placeholder="Email" class="flex-1">
+                        <input id="subject" name="subject" placeholder="Subject" class="w-full">
+                        <textarea id="message" name="message" placeholder="Message" style="height:200px" class="basis-full"></textarea>
+                        <button type="submit" class="bg-cyan-500  text-xl font-semibold text-white uppercase px-8 py-2 border-2 rounded-lg">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="flex-1">
+            <p class="text-3xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, veniam.</p>
+            <h2 class="text-white mb-6">Contact Information</h2>
+            
+            </div>
+            <h2 class="text-white mb-6">Follow Me!</h2>
+            <div class="flex gap-4">
+                <Icon class="w-8" name="ph:instagram-logo-bold"/>
+                <Icon class="w-8" name="ph:linkedin-logo-bold"/>
+                <Icon class="w-8" name="ph:dribbble-logo-bold"/>
+            </div>
+        </div>
+    </div> -->
+</section>
+
+<style lang="css">
+    [astro-icon] {
+        color: white;
+    }
+</style>

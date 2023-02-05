@@ -1,0 +1,1 @@
+import myDefault from "../config/lightbox.js"; 

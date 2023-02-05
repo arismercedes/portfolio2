@@ -1,0 +1,69 @@
+---
+interface Props {
+    rowSpan?: number;
+    colSpan?: number;
+    imgSrc: string;
+    imgTitle: string;
+    imgType: string;
+}
+
+const { imgSrc, imgTitle = "Title", imgType = "Type" } = Astro.props
+const { colSpan = "", rowSpan = ""} = Astro.props
+const colResult = colSpan > 0 ? `grid-col-span-${colSpan}` : "" 
+const rowResult = rowSpan > 0 ? `grid-row-span-${rowSpan}` : "" 
+---
+<div data-index="" class={`grid relative overflow-hidden hover_tgt ${colResult} ${rowResult}`}>
+    <img class="object-cover w-full h-full" src={imgSrc}/>
+    <div class="bg-cyan-500 absolute w-full h-full text-center grid slide">
+        <div class="self-center text-white">
+            <p class="uppercase font-semibold text-2xl">{imgTitle}</p>
+            <p class="text-lg">{imgType}</p>
+        </div>  
+    </div>
+
+    
+</div>
+
+<!-- <script>
+import { isRenderTemplateResult } from "astro/dist/runtime/server/render/astro";
+
+
+    const test = document.querySelectorAll(".hover_tgt");
+    const lightbox = document.querySelector("#lightbox");
+    const closeBtn = document.querySelector(".closeBtn");
+    let isOpen = false;
+    
+
+
+    function openImg(e) {
+        let index = e.currentTarget.dataset.index;
+        let item = document.querySelector(`#lightbox div[data-index="${index}"]`);
+
+        item.classList.toggle("hidden");
+        lightbox.classList.toggle("hidden");
+        isOpen = true;
+
+        console.log(index);
+        console.log(item);
+    }
+    function closeLightbox() {
+        lightbox.classList.toggle("hidden")
+        isOpen = false;
+
+    }
+    test.forEach((item) => {
+            item.addEventListener("click", openImg)
+    })
+    closeBtn.addEventListener("click", closeLightbox)
+    document.addEventListener('keydown', (event) => {
+        
+        if (event.key === 'Escape') {
+            const isNotCombinedKey = !(event.ctrlKey || event.altKey || event.shiftKey);
+            if (isNotCombinedKey) {
+              if (isOpen === true) {
+                closeLightbox();
+              }
+            }
+        }
+    });
+</script> -->

@@ -11,6 +11,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.8.0"
+    "astro": "^1.8.0",
+    "astro-icon": "^0.8.0"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^2.1.3"
   }
 }

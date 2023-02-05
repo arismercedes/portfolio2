@@ -1,0 +1,6 @@
+---
+const date = new Date();
+const currentYear = date.getFullYear()
+const { name } = Astro.props
+---
+<p class="text-center">&copy; Copyright {currentYear} {name}</p>

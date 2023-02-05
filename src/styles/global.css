@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    
+    body {
+        @apply text-xs
+    }
+    h2 {
+        @apply text-4xl font-semibold 
+    }
+    .btn {
+        @apply bg-cyan-500 shadow-xl shadow-cyan-500/50 text-white font-medium rounded-lg py-4 px-8 
+    }
+    .btn:hover {
+        @apply  bg-cyan-400
+    }
+    /* input, textarea{
+        @apply rounded-lg  p-2 text-xl
+    } */
+    .text-shadow {
+        text-shadow: 2px 4px 4px rgb(0 0 0 / 1)
+    }
+    .grid-col-auto {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 25px;        
+    }
+    .grid-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .hover_tgt:hover .slide {
+        top: 0;
+        opacity: 1;
+    }
+    .slide {
+        top: 50%;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.7s;
+        
+    }
+    .lightboxImg {
+        opacity: 0;
+        transition: all 0.7s;
+    }
+    .imgAppear {
+        opacity: 1;
+    }
+
+
+    @media screen and (min-width: 1024px) {
+        .grid-col-auto {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 1fr;
+        }
+    
+        .grid-col-span-2 {
+            grid-column-start: span 2;
+            grid-column-end: span 2;
+        }
+        .grid-row-span-2 {
+            grid-row: span 2/ span 2;
+        }
+        .grid-col-span-3 {
+            grid-column: span 3/ span 3;
+        }
+        .grid-row-span-3 {
+            grid-row: span 3/ span 3;
+        }
+    }
+
+}

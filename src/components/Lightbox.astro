@@ -1,0 +1,40 @@
+---
+import { Icon } from 'astro-icon';
+---
+<div id="lightbox" class="grid place-content-cente fixed w-full h-full  z-20 p-28  bg-white hidden">
+    <div class="absolute w-full">
+        <Icon class="absolute prev top-[50vh] left-[40px] w-10 p-1.5 bg-gray-500 hover:bg-cyan-500 rounded-lg" name="ic:baseline-navigate-before"/>
+        <Icon class="absolute next  top-[50vh] right-[40px] w-10 p-1.5 bg-gray-500 hover:bg-cyan-500 rounded-lg" name="ic:outline-navigate-next"/>
+        <Icon class="closeBtn absolute  top-[40px] right-[40px] w-10 p-1.5  bg-gray-500 hover:bg-cyan-500  rounded-lg" name="ic:baseline-close"/>
+    </div>
+    <div class="grid place-content-center top-0 left-0">
+        <div data-index="1" class="hidden lightboxImg">
+            <img class="" src="https://picsum.photos/seed/1/640/480" alt="">
+        </div>
+        <div data-index="2" class="hidden lightboxImg">
+            <img class="w-full" src="https://picsum.photos/seed/2/640/480" alt="">
+        </div>
+        <div data-index="3" class="hidden lightboxImg">
+            <img class="w-full" src="https://picsum.photos/seed/3/640/480" alt="">
+        </div>
+        <div data-index="4" class="hidden lightboxImg">
+            <img class="w-full" src="https://picsum.photos/seed/4/640/480" alt="">
+        </div>
+        <div data-index="5" class="hidden lightboxImg">
+            <img class="w-full" src="https://picsum.photos/seed/5/640/480" alt="">
+        </div>
+        <div data-index="6" class="hidden lightboxImg">
+            <img class="w-full" src="https://picsum.photos/seed/6/640/480" alt="">
+        </div>
+    </div>
+</div>
+<style lang="css">
+    [astro-icon = "ic:baseline-navigate-before"], [astro-icon = "ic:outline-navigate-next"], [astro-icon = "ic:baseline-close"] {
+        color: white
+    }
+</style>
+
+<script>
+
+</script>
+
