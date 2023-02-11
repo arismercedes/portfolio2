@@ -1,7 +1,7 @@
 export const nav = [
 	{
 		title: 'Home',
-		slug: '/',
+		slug: '#hero',
 	},
 	{
 		title: 'Works',

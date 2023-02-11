@@ -1,0 +1,23 @@
+---
+const { name } = Astro.props
+---
+<section id="hero" class="grid items-center w-full h-[100vh] pt-[170px] px-6 md:px-20 lg:px-44">
+    <div class="w-full">
+        <div class="md:w-[50%]">
+            <span class="text-sm md:text-base text-white uppercase font-semibold">Hello!</span>
+            <h3 class="text-4xl md:text-6xl text-white font-bold  mb-1">I'm <span class="text-cyan-400">Aris</span>.</h3>
+            <h3 class="text-lg lg:text-2xl text-white mb-4 lg:mb-8">A <span class="text-cyan-400">Graphic</span> Designer</h3>
+            <p class="text-sm md:text-lg font-light text-white mb-8 lg:mb-12">As a skilled and passionate graphic designer, I am excited to share my diverse range of projects and showcase my unique style and abilities through this portfolio.</p>
+            <div class="">
+                <button class="btn text-base font-bold">Get in Touch</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    #hero {
+        background-image: linear-gradient(to right bottom, #003a94, #0067bd, #0092db, #00bef0, #00e9ff);
+    }
+</style>

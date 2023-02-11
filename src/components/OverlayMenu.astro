@@ -2,7 +2,7 @@
 import { nav } from '../config/nav';
 ---
 <div id="overlayMenu" class="fixed h-full w-full top-0 z-10 right-[-100%] grid place-content-center bg-white transition-all ease-in duration-500">  
-    <ul class="flex flex-col gap-20 mr-8 text-center text-2xl">
+    <ul class="flex flex-col gap-20 text-center text-2xl">
         {nav.map(item => (
             <li class="uppercase"><a class="hover:text-cyan-500" href={item.slug}>{item.title}</a></li>
         ))}

@@ -1,11 +1,11 @@
 ---
 import { Icon } from "astro-icon";
 ---
-<section id="contact" class="bg-cyan-500 py-24 grid place-items-center">
+<section id="contact" class="bg-cyan-500 py-24 px-6 grid place-items-center">
     
     <div class="grid lg:max-w-2xl">
-        <h2 class="text-center text-white mb-6">Get in Touch</h2>
-        <p class="place-self-center text-center w-2/3 mb-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat eius dolores, at quasi unde optio facilis neque blanditiis harum.</p>
+        <h2 class="text-5xl font-semibold text-center text-white mb-6">Get in Touch</h2>
+        <p class="text-sm md:text-base text-white place-self-center text-center w-2/3 mb-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat eius dolores, at quasi unde optio facilis neque blanditiis harum.</p>
         <div class="flex  md:flex-row flex-wrap gap-4 mb-4">
             <div class="flex p-3 grow bg-white rounded">
                 <Icon class="bg-gray-200 w-8 mr-4 rounded-full" name="ic:outline-phone-in-talk"/>
@@ -30,8 +30,8 @@ import { Icon } from "astro-icon";
             </div>
         </div>
         <form action="" class="grid grid-cols-2 gap-4">
-            <input type="text" id="name" name="name" placeholder="Your Name" class="p-2 rounded">
-            <input type="email" id="email" name="email" placeholder="Email" class="p-2 rounded">
+            <input type="text" id="name" name="name" placeholder="Your Name" class="p-2 rounded col-span-2 md:col-span-1">
+            <input type="email" id="email" name="email" placeholder="Email" class="p-2 rounded col-span-2 md:col-span-1">
             <input id="subject" name="subject" placeholder="Subject" class="col-span-2 p-2 rounded">
             <textarea id="message" name="message" placeholder="Message" class="col-span-2 h-32 p-2 rounded"></textarea>
             <button type="submit" class="bg-cyan-500  text-md font-semibold text-white uppercase px-8 py-2 border-2 rounded-lg col-span-2">Submit</button>

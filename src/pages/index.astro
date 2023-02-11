@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 import Work from '../components/Work.astro';
 import About from '../components/About.astro'
 import Footer from '../components/Footer.astro'
@@ -9,7 +9,7 @@ import {name, title} from '../config/settings.js'
 ---
 
 <Base title = {title}>
-	<Header name = {name}></Header>
+	<Hero name = {name}></Hero>
 	<Work></Work>
 	<About></About>
 	<Contact></Contact>

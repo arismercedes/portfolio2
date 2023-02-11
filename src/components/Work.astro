@@ -2,34 +2,51 @@
 import Thumbnail from "./Thumbnail.astro";
 
 ---
-<section id="work" class=" lg:max-w-2xl mx-auto my-[500px]">  
-    <h2 class="test text-center text-5xl font-semibold mb-8">My Work</h2>     
-    <div class="grid place-content-center ">
-        <div class="grid grid-col-auto  lg:grid-cols-3 gap-4">
-            <!-- <Thumbnail imgSrc="https://picsum.photos/seed/1/640/480" imgTitle="Title 1" imgType="Type"></Thumbnail>
+<section id="work" class="  mx-auto py-24 px-6">  
+    <h2 class="text-center text-5xl font-semibold mb-8">My Work</h2>     
+    <div class="grid place-content-center w-full">
+        <div class="thumbnail-container">
+            <!-- grid grid-col-auto  lg:grid-cols-3 gap-4 -->
+            <Thumbnail imgSrc="https://picsum.photos/seed/1/640/480" imgTitle="Title 1" imgType="Type"></Thumbnail>
             <Thumbnail imgSrc="https://picsum.photos/seed/2/640/480" imgTitle="Title 2" imgType="Type"></Thumbnail>
             <Thumbnail imgSrc="https://picsum.photos/seed/3/640/480" imgTitle="Title 3" imgType="Type"></Thumbnail>
             <Thumbnail imgSrc="https://picsum.photos/seed/4/640/480" imgTitle="Title 4" imgType="Type"></Thumbnail>
             <Thumbnail imgSrc="https://picsum.photos/seed/5/640/480" imgTitle="Title 5" imgType="Type"></Thumbnail>
-            <Thumbnail imgSrc="https://picsum.photos/seed/6/640/480" imgTitle="Title 6" imgType="Type"></Thumbnail> -->
+            <Thumbnail imgSrc="https://picsum.photos/seed/6/640/480" imgTitle="Title 6" imgType="Type"></Thumbnail>
             
-            <div class="grid gap-4">
-                <img  class="object-cover rounded-lg" src="https://picsum.photos/seed/1/640/480" alt="">
-                <img class="w-full lg:h-48 object-cover rounded-lg" src="https://picsum.photos/seed/1/640/480" alt="">
-            </div>
-            <div class="grid gap-4">
-                <img class="w-full lg:h-48 object-cover rounded-lg" src="https://picsum.photos/seed/1/640/480" alt="">
-                <img  class="object-cover rounded-lg" src="https://picsum.photos/seed/1/640/480" alt="">
-            </div>
-            <div class="grid gap-4">
-                <img  class="object-cover rounded-lg" src="https://picsum.photos/seed/1/640/480" alt="">
-                <img class="w-full lg:h-48 object-cover rounded-lg" src="https://picsum.photos/seed/1/640/480" alt="">
+                <!-- <img class="thumbnail " src="https://picsum.photos/seed/1/640/480" alt="">
+                <img class="thumbnail" src="https://picsum.photos/seed/1/640/480" alt="">
+                <img class="thumbnail" src="https://picsum.photos/seed/1/640/480" alt="">
+                <img class="thumbnail" src="https://picsum.photos/seed/1/640/480" alt="">
+                <img class="thumbnail" src="https://picsum.photos/seed/1/640/480" alt="">
+                <img class="thumbnail" src="https://picsum.photos/seed/1/640/480" alt=""> -->
 
-            </div>
+
         </div>
     </div>
 
 </section>  
+
+
+<style>
+    .thumbnail-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 20px;        
+    }
+
+    @media screen and (min-width: 1024px) {
+        .thumbnail-container {
+            display: flex;
+            flex-flow: column wrap;
+            width: 600px;
+            height: 620px;
+            align-content: center;
+        }
+    }
+</style>
+
 
 <script>
     const imgs = document.querySelectorAll(".hover_tgt")
